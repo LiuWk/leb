@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config>
+	<!-- <className>SpringSkinFactory</className> -->
+	<className>SummerSkinFactory</className>
+</config>

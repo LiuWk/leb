@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config>
+	<className>pattern.template.CurrentAccount</className>
+	<className>pattern.template.SavingAccount</className>
+	<className>pattern.visitor.FADepartment</className>
+	<className>pattern.visitor.practice.ConcreteVisitor</className>
+</config>

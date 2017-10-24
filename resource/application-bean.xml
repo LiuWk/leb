@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	 xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			 http://www.springframework.org/schema/beans/spring-beans-4.1.xsd   
+			 http://www.springframework.org/schema/aop 
+			 http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+			 http://www.springframework.org/schema/context
+             http://www.springframework.org/schema/context/spring-context-4.1.xsd 
+             http://www.springframework.org/schema/mvc 
+             http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd  ">
+    <!-- 打开注解配置 -->
+    <context:annotation-config />
+    <!--注册Bean验证后处理器-->  
+    <bean class="org.springframework.validation.beanvalidation.BeanValidationPostProcessor"/>
+     <!--注册方法验证的后处理器-->
+    <bean class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor"/>
+    
+	<!-- 指定自动搜索 Bean 组件、自动搜索方面类 -->
+	 <context:component-scan base-package="spring.aop" >
+		 <context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
+		 <context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect" />
+	</context:component-scan> 
+	
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+			    <value>classpath:/config.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 启动 @AspectJ 支持 -->
+	<aop:aspectj-autoproxy />
+	
+	<!-- <bean id="user" class="spring.aop.validate.User">
+		<property name="name" value="mike"/>
+		<property name="phone" value="14411112222"/>
+	</bean> -->
+</beans>
