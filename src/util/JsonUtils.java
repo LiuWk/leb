@@ -1,12 +1,9 @@
 package util;
 
 import java.nio.charset.Charset;
-import java.util.Date;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializeConfig;
-import com.alibaba.fastjson.serializer.SimpleDateFormatSerializer;
 
 /**
  * 
@@ -19,9 +16,7 @@ import com.alibaba.fastjson.serializer.SimpleDateFormatSerializer;
  *     1. [2015年11月26日]创建文件 by zheng.p
  */
 public class JsonUtils {
-    private static SerializeConfig mapping = new SerializeConfig();
     private static final String DATE_FORMAT = "yyyyMMddHHmmss";
-//    private static final JsonValueFilter JSON_VALUE_FILTER = new JsonValueFilter();
     
     public String toJson() {
         return toJson(false);
@@ -44,17 +39,17 @@ public class JsonUtils {
         return JSON.toJSONString(obj, prettyFormat);
     }
     
-    /**
-     * 自定义时间格式 
-     * 
-     * @param obj 转换对象
-     * @param dateFormat 日期格式化，默认为yyyyMMddHHmmss
-     * @return json字符串
-     */
-    public static String toJson(final Object obj , String dateFormat){
-        mapping.put(Date.class, new SimpleDateFormatSerializer(null == dateFormat ? DATE_FORMAT : dateFormat));
-        return JSON.toJSONString(obj , mapping);
-    }
+//    /**
+//     * 自定义时间格式 
+//     * 
+//     * @param obj 转换对象
+//     * @param dateFormat 日期格式化，默认为yyyyMMddHHmmss
+//     * @return json字符串
+//     */
+//    public static String toJson(final Object obj , String dateFormat){
+//        mapping.put(Date.class, new SimpleDateFormatSerializer(null == dateFormat ? DATE_FORMAT : dateFormat));
+//        return JSON.toJSONString(obj , mapping);
+//    }
     
     /**
      * 自定义数据过滤器

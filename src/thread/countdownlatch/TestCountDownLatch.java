@@ -23,7 +23,7 @@ public class TestCountDownLatch {
             public void run() {
                 System.out.println("t1线程开始");
                 try {
-                    countDown.await();
+                    countDown.await();//countDown对象减少到0，继续执行
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

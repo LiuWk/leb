@@ -4,9 +4,8 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
-import org.apache.log4j.Logger;
 
-import util.Des3Util;
+import org.apache.log4j.Logger;
 
 public class SocketClient {
 	private Logger logger = Logger.getLogger(SocketClient.class);
@@ -77,7 +76,7 @@ public class SocketClient {
 				length += readline;
 			}
 			reeciveStr = new String(body, charEncoding);
-			System.out.println(new String(Des3Util.decrypt(body)));
+//			System.out.println(new String(Des3Util.decrypt(body)));
 			this.logger.debug("soketClient receive mesg:" + reeciveStr + "  charEncoding: " + charEncoding);
 		} catch (IOException e) {
 			e.printStackTrace();

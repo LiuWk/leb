@@ -21,24 +21,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/maven_pool/maven/com/alibaba/fastjson/1.2.31/fastjson-1.2.31.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.archivename" value="fastjson-1.2.31.jar"/>
-			<attribute name="maven.groupId" value="com.alibaba"/>
-			<attribute name="maven.artifactId" value="fastjson"/>
-			<attribute name="maven.version" value="1.2.31"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/maven_pool/maven/commons-codec/commons-codec/1.4/commons-codec-1.4.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="commons-codec"/>
-			<attribute name="maven.artifactId" value="commons-codec"/>
-			<attribute name="maven.version" value="1.4"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
