@@ -29,6 +29,7 @@ class MyThread2 extends Thread {
 
     private Lock lock = null;
 
+    @Override
     public void run() {
         lock.lock();
         try {

@@ -33,6 +33,7 @@ public class TestThreadRunable {
 class Thread1 extends Thread {
     private volatile int count = 10;
 
+    @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
             if (count > 0) {

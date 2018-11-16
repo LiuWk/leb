@@ -22,7 +22,8 @@ public class TestLinkedBlockingQueue {
             q.offer("2");
             q.offer("3");
             q.offer("4");
-            
+            System.out.println("poll():"+q.poll());
+            System.out.println("take():"+q.take());
 //            System.out.println(q.size());
         } catch (Exception e) {
             e.printStackTrace();

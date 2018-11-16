@@ -5,7 +5,7 @@ public abstract class Account {
 		System.out.println("账号：" + account);
 		System.out.println("密码：" + password);
 		// 模拟登录
-		if (account.equals("张无忌") && password.equals("123456")) {
+		if ("张无忌".equals(account) && "123456".equals(password)) {
 			return true;
 		} else {
 			return false;

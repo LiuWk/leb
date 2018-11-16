@@ -28,7 +28,9 @@ public class SocketServiceHandler implements Runnable {
             String str = null;
             while(true){
                 str = in.readLine();
-                if(str == null) break;
+                if(str == null) {
+                    break;
+                }
                 System.out.println("Server :" + str);
                 out.println("服务器端回送响的应数据.");
             }

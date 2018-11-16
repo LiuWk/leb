@@ -26,8 +26,9 @@ public class Client {
 		} catch (Exception e) {
 			log.info("Client.sendMessage 发送请求出错", e);
 		} finally {
-			if (client != null)
-				client.destory();
+			if (client != null) {
+                client.destory();
+            }
 		}
 		return result;
 	}

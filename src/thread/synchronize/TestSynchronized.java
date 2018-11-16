@@ -21,9 +21,9 @@ public class TestSynchronized {
 class MyThread extends Thread {
     private int i;
 
+    @Override
     public void run() {
-        Sync sync = new Sync();
-        sync.test(i);
+        Sync.test(i);
     }
 
     public MyThread(int i) {

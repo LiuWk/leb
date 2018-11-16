@@ -1,0 +1,2 @@
+查看jvm参数相关的命令：
+    java -XX:+PrintCommandLineFlags

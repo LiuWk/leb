@@ -11,6 +11,7 @@ public class TimePrinter extends Thread {
 		name = n;
 	}
 
+	@Override
 	public void run() {
 		while (true) {
 			try {

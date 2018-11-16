@@ -9,7 +9,9 @@ public class LogFormatUtil {
      * @return
      */
     public static String getFormatTemplate(String... args) {
-        if (args == null) return "";
+        if (args == null) {
+            return "";
+        }
         StringBuilder _formatStr = new StringBuilder();
         for (int i = 0; i < args.length; i++) {
             _formatStr.append(args[i]);
