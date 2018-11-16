@@ -4,74 +4,7 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="868f0113-a13d-47f0-a203-e8b535528344" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_40.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_lmax_disruptor_3_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_10_5_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_el_api_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_javax_el_api_2_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ansj_ansj_seg_5_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_web_javax_el_2_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_3_2_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_CR2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_nlpcn_nlp_lang_1_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design_patterns.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ArrayListTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jvm/HeapOomMock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jvm/PermGenOomMock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jvm/说明" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/thread/stopthread/TestThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/thread/validate/VolatileExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/chain/of/responsibility/PurchaseRequest.java" afterPath="$PROJECT_DIR$/src/pattern/chain/of/responsibility/PurchaseRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/command/FBSettingWindow.java" afterPath="$PROJECT_DIR$/src/pattern/command/FBSettingWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/decorator/ConcreteComponent.java" afterPath="$PROJECT_DIR$/src/pattern/decorator/ConcreteComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/flyweight/BlackIgoChessman.java" afterPath="$PROJECT_DIR$/src/pattern/flyweight/BlackIgoChessman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/flyweight/WhiteIgoChessman.java" afterPath="$PROJECT_DIR$/src/pattern/flyweight/WhiteIgoChessman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/observer/AllyControlCenter.java" afterPath="$PROJECT_DIR$/src/pattern/observer/AllyControlCenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/observer/Observer.java" afterPath="$PROJECT_DIR$/src/pattern/observer/Observer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/simple/factory/ChartFactory.java" afterPath="$PROJECT_DIR$/src/pattern/simple/factory/ChartFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/state/NormalState.java" afterPath="$PROJECT_DIR$/src/pattern/state/NormalState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pattern/template/Account.java" afterPath="$PROJECT_DIR$/src/pattern/template/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/socket/Client.java" afterPath="$PROJECT_DIR$/src/socket/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/socket/IdcardUtils.java" afterPath="$PROJECT_DIR$/src/socket/IdcardUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/socket/SocketServiceHandler.java" afterPath="$PROJECT_DIR$/src/socket/SocketServiceHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spring/aop/Test3.java" afterPath="$PROJECT_DIR$/src/spring/aop/Test3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spring/aop/entity/Chinese.java" afterPath="$PROJECT_DIR$/src/spring/aop/entity/Chinese.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spring/aop/validate/PhoneValidator.java" afterPath="$PROJECT_DIR$/src/spring/aop/validate/PhoneValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Client.java" afterPath="$PROJECT_DIR$/src/test/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thread/TestThreadRunable.java" afterPath="$PROJECT_DIR$/src/thread/TestThreadRunable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thread/TimePrinter.java" afterPath="$PROJECT_DIR$/src/thread/TimePrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thread/queue/TestLinkedBlockingQueue.java" afterPath="$PROJECT_DIR$/src/thread/queue/TestLinkedBlockingQueue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thread/queue/TestPriorityBlockingQueue.java" afterPath="$PROJECT_DIR$/src/thread/queue/TestPriorityBlockingQueue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thread/synchronize/TestReentrantLock.java" afterPath="$PROJECT_DIR$/src/thread/synchronize/TestReentrantLock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thread/synchronize/TestSynchronized.java" afterPath="$PROJECT_DIR$/src/thread/synchronize/TestSynchronized.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/LogFormatUtil.java" afterPath="$PROJECT_DIR$/src/util/LogFormatUtil.java" />
-    </list>
+    <list default="true" id="868f0113-a13d-47f0-a203-e8b535528344" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -246,7 +179,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -555,15 +488,15 @@
       <option name="presentableId" value="Default" />
       <updated>1542247564973</updated>
       <workItem from="1542247566174" duration="19778000" />
-      <workItem from="1542332261700" duration="13231000" />
+      <workItem from="1542332261700" duration="13515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33009000" />
+    <option name="totallyTimeSpent" value="33293000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
