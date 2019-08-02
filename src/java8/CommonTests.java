@@ -2,6 +2,8 @@ package java8;
 
 import com.google.common.collect.Lists;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 /**
@@ -39,6 +41,17 @@ public class CommonTests {
     }
 
     public static void main(String[] args) {
-        compareForAndStream();
+//        compareForAndStream();
+
+//        List<Integer> list = Arrays.asList(10, 101010101, 1);
+//        Integer total = list.parallelStream().reduce(Integer::sum).orElse(0);
+//        System.out.println(total);
+//        List<Integer> sublist = list.parallelStream().filter(o -> o > 10).collect(Collectors.toList());
+//        System.out.println(sublist);
+
+
     }
+
 }
+
+

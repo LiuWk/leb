@@ -1,23 +1,14 @@
 package util;
 
-import java.nio.charset.Charset;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
-/**
- * 
- * 北京掌中彩信息科技有限公司源代码，版权归北京掌中彩信息科技有限公司所有。
- * 
- * 项目名称 : common-util
- * 创建日期 : 2015年11月26日
- * 类  描  述 : alibaba.fastjson:对json格式数据转换工具类
- * 修改历史 : 
- *     1. [2015年11月26日]创建文件 by zheng.p
- */
+import java.nio.charset.Charset;
+
+
 public class JsonUtils {
     private static final String DATE_FORMAT = "yyyyMMddHHmmss";
-    
+
     public String toJson() {
         return toJson(false);
     }
@@ -28,17 +19,16 @@ public class JsonUtils {
 
 
     /**
-     * 
      * 对象转成Json串
-     * 
-     * @param obj 转换对象
+     *
+     * @param obj          转换对象
      * @param prettyFormat 是否需要格式化
      * @return json字符串
      */
     public static String toJson(final Object obj, boolean prettyFormat) {
         return JSON.toJSONString(obj, prettyFormat);
     }
-    
+
 //    /**
 //     * 自定义时间格式 
 //     * 
@@ -50,10 +40,10 @@ public class JsonUtils {
 //        mapping.put(Date.class, new SimpleDateFormatSerializer(null == dateFormat ? DATE_FORMAT : dateFormat));
 //        return JSON.toJSONString(obj , mapping);
 //    }
-    
+
     /**
      * 自定义数据过滤器
-     * 
+     *
      * @param obj 转换对象
      * @param filter 数据过滤器
      * @return json字符串
@@ -64,10 +54,9 @@ public class JsonUtils {
 //    }
 
     /**
-     * 
      * Json串转成对象
-     * 
-     * @param json 字符串
+     *
+     * @param json     字符串
      * @param classOfT class对象
      * @return 实体类对象
      */
@@ -77,14 +66,14 @@ public class JsonUtils {
 
     /**
      * 根据json字符串转换成json对象
-     * 
+     *
      * @param json 字符串
      * @return json对象
      * @author zheng.p
      * @date 2015年11月25日 下午5:08:33
      */
-    public static JSONObject fromJson(String json){
-        return JSON.parseObject(json);  
+    public static JSONObject fromJson(String json) {
+        return JSON.parseObject(json);
     }
 
     public byte[] encode() {

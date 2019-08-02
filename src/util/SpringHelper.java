@@ -9,16 +9,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-/**
- * 
- * 北京掌中彩信息科技有限公司源代码，版权归北京掌中彩信息科技有限公司所有。
- * 
- * 项目名称 : common-util
- * 创建日期 : 2015年10月21日 下午3:49:02
- * 类  描  述 : spring上下文加载工具类
- * 修改历史 : 
- *     1. [2015年10月21日]创建文件 by zheng.p
- */
 public class SpringHelper {
 
     private static final Logger logger = LoggerFactory.getLogger(SpringHelper.class);
