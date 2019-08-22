@@ -11,7 +11,8 @@ public class TimePrinter extends Thread {
 		name = n;
 	}
 
-	public void run() {
+	@Override
+    public void run() {
 		while (true) {
 			try {
 				System.out.println(name + ":" + new Date(System.currentTimeMillis()));

@@ -64,7 +64,8 @@ class Director extends Approver {
 	}
 
 	// 具体请求处理方法
-	public void processRequest(PurchaseRequest request) {
+	@Override
+    public void processRequest(PurchaseRequest request) {
 		if (request.getAmount() < 50000) {
 			System.out.println("主任" + this.name + "审批采购单：" + request.getNumber());
 		} else {
@@ -82,7 +83,8 @@ class VicePresident extends Approver {
 	}
 
 	// 具体请求处理方法
-	public void processRequest(PurchaseRequest request) {
+	@Override
+    public void processRequest(PurchaseRequest request) {
 		if (request.getAmount() < 100000) {
 			System.out.println("副董事长" + this.name + "审批采购单：" + request.getPurpose());
 		} else {
@@ -98,7 +100,8 @@ class President extends Approver {
 	}
 
 	// 具体请求处理方法
-	public void processRequest(PurchaseRequest request) {
+	@Override
+    public void processRequest(PurchaseRequest request) {
 		if (request.getAmount() < 500000) {
 			System.out.println("董事长" + this.name + "审批采购单：" + request.getNumber());
 		} else {
@@ -114,7 +117,8 @@ class Congress extends Approver {
 	}
 
 	// 具体请求处理方法
-	public void processRequest(PurchaseRequest request) {
+	@Override
+    public void processRequest(PurchaseRequest request) {
 		System.out.println("召开董事会审批采购单：" + request.getNumber() + "，金额");
 	}
 }

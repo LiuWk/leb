@@ -1,9 +1,10 @@
 package spring.aop.validate;
 
-import java.io.Serializable;
-
-import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * leb测试用源代码
@@ -36,12 +37,13 @@ import org.springframework.beans.factory.annotation.Value;
     @NotEmpty   被注释的字符串的必须非空  
     @Range(min=,max=,message=)  被注释的元素必须在合适的范围内  
  */
+@Component
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Phone(message = "手机号非法！")
-    @NotEmpty(message = "手机号不能为空！")
+    @NotNull(message = "手机号不能为空！")
     private String phone;
 
     private String name;

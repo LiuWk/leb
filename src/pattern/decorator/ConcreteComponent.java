@@ -10,7 +10,8 @@ public class ConcreteComponent extends Decorator {
 		super(component);
 		// TODO Auto-generated constructor stub
 	}
-	public void operation()
+	@Override
+    public void operation()
 	{
 		super.operation(); //调用原有业务方法
 		addedBehavior(); //调用新增业务方法

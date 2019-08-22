@@ -1,5 +1,7 @@
 package spring.aop.validate;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -9,7 +11,6 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * leb测试用源代码

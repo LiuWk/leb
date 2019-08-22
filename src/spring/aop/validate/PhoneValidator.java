@@ -14,8 +14,9 @@ public class PhoneValidator implements ConstraintValidator<Phone,String>{
 
 	@Override
 	public boolean isValid(String value, ConstraintValidatorContext context) {
-		if(StringUtils.isEmpty(value))
+		if(StringUtils.isEmpty(value)) {
             return true;
+        }
         if(value.matches("((\\+86)|(86))?1[3|4|5|8]\\d{9}")){
             return true;
         }

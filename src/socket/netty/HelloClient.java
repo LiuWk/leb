@@ -14,6 +14,10 @@ import org.jboss.netty.channel.SimpleChannelHandler;
 import org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory;
 import org.jboss.netty.handler.codec.serialization.ObjectEncoder;
 
+/**
+ * 有点问题，用的是jboss的netty包
+ */
+@Deprecated
 public class HelloClient {
 
 	public static void main(String[] args) {
@@ -62,8 +66,8 @@ public class HelloClient {
          *  
          */  
         @Override  
-        public void channelConnected(ChannelHandlerContext ctx,  
-                ChannelStateEvent e) {  
+        public void channelConnected(ChannelHandlerContext ctx,
+									 ChannelStateEvent e) {
             System.out.println("Hello world, I'm client.");  
         }  
     }  

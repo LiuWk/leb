@@ -78,7 +78,8 @@ class HelpCommand extends Command {
 	}
 
 	// 命令执行方法，将调用请求接收者的业务方法
-	public void execute() {
+	@Override
+    public void execute() {
 		hhObj.display();
 	}
 }
@@ -92,7 +93,8 @@ class MinimizeCommand extends Command {
 	}
 
 	// 命令执行方法，将调用请求接收者的业务方法
-	public void execute() {
+	@Override
+    public void execute() {
 		whObj.minimize();
 	}
 }
