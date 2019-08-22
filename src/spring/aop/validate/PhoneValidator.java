@@ -5,6 +5,9 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.util.StringUtils;
 
+/**
+ * 自定义注解
+ */
 public class PhoneValidator implements ConstraintValidator<Phone,String>{
 
 	@Override
