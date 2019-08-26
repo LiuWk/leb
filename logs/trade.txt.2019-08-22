@@ -1,0 +1,187 @@
+[INFO][190822 15:25:41,014][org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248)][Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]]
+[INFO][190822 15:25:41,030][org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174)][Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@23ceabc1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5d5eef3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56f4468b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cc4c815]]
+[INFO][190822 15:25:41,153][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[INFO][190822 15:25:41,566][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.GenericApplicationContext@553f17c: startup date [Thu Aug 22 15:25:41 CST 2019]; root of context hierarchy]
+[INFO][190822 15:25:41,846][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[ERROR][190822 15:25:42,590][org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:234)][Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56f4468b] to prepare test instance [spring.aop.validate.UserTest@55cb6996]]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'spring.aop.validate.UserTest': Unsatisfied dependency expressed through field 'user'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'spring.aop.validate.User' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:586)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:384)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'spring.aop.validate.User' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1491)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1102)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1064)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	... 27 more
+[INFO][190822 15:25:42,628][org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:984)][Closing org.springframework.context.support.GenericApplicationContext@553f17c: startup date [Thu Aug 22 15:25:41 CST 2019]; root of context hierarchy]
+[INFO][190822 15:26:37,718][org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248)][Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]]
+[INFO][190822 15:26:37,734][org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174)][Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@23ceabc1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5d5eef3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56f4468b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cc4c815]]
+[INFO][190822 15:26:37,852][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[INFO][190822 15:26:38,201][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.GenericApplicationContext@553f17c: startup date [Thu Aug 22 15:26:38 CST 2019]; root of context hierarchy]
+[INFO][190822 15:26:38,408][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[WARN][190822 15:26:39,059][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)][Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in file [D:\git\leb\target\classes\spring\aop\validate\User.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！]
+[ERROR][190822 15:26:39,062][org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:234)][Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56f4468b] to prepare test instance [spring.aop.validate.UserTest@25df00a0]]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in file [D:\git\leb\target\classes\spring\aop\validate\User.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！
+	at org.springframework.validation.beanvalidation.BeanValidationPostProcessor.doValidate(BeanValidationPostProcessor.java:116)
+	at org.springframework.validation.beanvalidation.BeanValidationPostProcessor.postProcessBeforeInitialization(BeanValidationPostProcessor.java:86)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1623)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	... 38 more
+[INFO][190822 16:31:21,043][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:31:21,196][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5ba23b66: startup date [Thu Aug 22 16:31:21 CST 2019]; root of context hierarchy]
+[INFO][190822 16:31:21,283][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[WARN][190822 16:31:22,304][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)][Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in file [D:\git\leb\target\classes\spring\aop\validate\User.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！]
+[INFO][190822 16:32:36,298][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:32:36,482][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5ba23b66: startup date [Thu Aug 22 16:32:36 CST 2019]; root of context hierarchy]
+[INFO][190822 16:32:36,594][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[WARN][190822 16:32:37,675][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)][Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in file [D:\git\leb\target\classes\spring\aop\validate\User.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！]
+[INFO][190822 16:33:18,203][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:33:18,387][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5ba23b66: startup date [Thu Aug 22 16:33:18 CST 2019]; root of context hierarchy]
+[INFO][190822 16:33:18,501][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[INFO][190822 16:35:41,420][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:35:41,568][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5ba23b66: startup date [Thu Aug 22 16:35:41 CST 2019]; root of context hierarchy]
+[INFO][190822 16:35:41,673][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[WARN][190822 16:35:42,976][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)][Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in file [D:\git\leb\target\classes\spring\aop\validate\User.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！]
+[INFO][190822 16:39:26,163][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:39:39,253][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:39:49,796][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:40:30,192][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:40:30,356][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5ba23b66: startup date [Thu Aug 22 16:40:30 CST 2019]; root of context hierarchy]
+[INFO][190822 16:40:30,456][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[WARN][190822 16:40:31,680][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)][Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in file [D:\git\leb\target\classes\spring\aop\validate\User.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！]
+[INFO][190822 16:46:21,792][org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248)][Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]]
+[INFO][190822 16:46:21,807][org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174)][Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@23ceabc1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5d5eef3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56f4468b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cc4c815]]
+[INFO][190822 16:46:21,915][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[INFO][190822 16:46:22,207][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.GenericApplicationContext@553f17c: startup date [Thu Aug 22 16:46:22 CST 2019]; root of context hierarchy]
+[INFO][190822 16:46:22,427][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[WARN][190822 16:46:23,162][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)][Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in file [D:\git\leb\target\classes\spring\aop\validate\User.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！]
+[ERROR][190822 16:46:23,166][org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:234)][Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56f4468b] to prepare test instance [spring.aop.validate.UserTest@6f15d60e]]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in file [D:\git\leb\target\classes\spring\aop\validate\User.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanInitializationException: Bean state is invalid: phone - 手机号不能为空！
+	at org.springframework.validation.beanvalidation.BeanValidationPostProcessor.doValidate(BeanValidationPostProcessor.java:116)
+	at org.springframework.validation.beanvalidation.BeanValidationPostProcessor.postProcessBeforeInitialization(BeanValidationPostProcessor.java:86)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1623)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	... 38 more
+[INFO][190822 16:48:28,609][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:48:28,775][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5ba23b66: startup date [Thu Aug 22 16:48:28 CST 2019]; root of context hierarchy]
+[INFO][190822 16:48:28,871][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[INFO][190822 16:48:40,576][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:48:40,742][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5ba23b66: startup date [Thu Aug 22 16:48:40 CST 2019]; root of context hierarchy]
+[INFO][190822 16:48:40,838][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
+[INFO][190822 16:48:50,663][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
+[INFO][190822 16:48:50,827][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5ba23b66: startup date [Thu Aug 22 16:48:50 CST 2019]; root of context hierarchy]
+[INFO][190822 16:48:50,932][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
