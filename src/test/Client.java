@@ -15,6 +15,11 @@ public class Client {
     public static void main(String[] args) {
         String json = "{ \"name\": \"HBP3\", \"phone\": \"161125040\" }";
         System.out.println(JsonUtils.fromJson(json, Test.class).getName());
+
+        Animal dog = new Dog("贾长伟");
+        Animal cat = new Cat("常委");
+        dog.bark();
+        cat.bark();
     }
 }
 class Test{
