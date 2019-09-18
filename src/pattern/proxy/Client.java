@@ -3,10 +3,10 @@ package pattern.proxy;
 public class Client {
 
 	public static void main(String[] args) {
-		IVehical car = new Car();
-		VehicalProxy proxy = new VehicalProxy(car);
+		IVehicle car = new Car();
+		VehicleProxy proxy = new VehicleProxy(car);
 
-		IVehical proxyObj = proxy.create();
+		IVehicle proxyObj = proxy.create();
 		proxyObj.run();
 	}
 

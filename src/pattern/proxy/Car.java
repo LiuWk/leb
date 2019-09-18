@@ -1,6 +1,6 @@
 package pattern.proxy;
 
-public class Car implements IVehical {
+public class Car implements IVehicle {
 
 	@Override
 	public void run() {

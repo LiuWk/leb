@@ -20,6 +20,11 @@ public class Client {
         Animal cat = new Cat("常委");
         dog.bark();
         cat.bark();
+        Test test = new Test();
+        test.doubleNum(10);
+        System.out.println();
+
+        String aaaaaaaaaaaaaaaaaaaaaaaaa;
     }
 }
 class Test{
@@ -44,5 +49,8 @@ class Test{
     public void setSex(int sex) {
         this.sex = sex;
     }
-    
+
+    public void doubleNum(final int num){
+        System.out.println(num * num);
+    }
 }
