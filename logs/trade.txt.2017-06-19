@@ -1,4 +1,0 @@
-[INFO][170619 09:36:39,125][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)][Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3f8f9dd6: startup date [Mon Jun 19 09:36:39 CST 2017]; root of context hierarchy]
-[INFO][170619 09:36:39,178][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)][Loading XML bean definitions from class path resource [application-bean.xml]]
-[INFO][170619 09:36:39,675][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)][Loading properties file from class path resource [config.properties]]
-[INFO][170619 09:36:39,834][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)][HV000001: Hibernate Validator 4.3.2.Final]
