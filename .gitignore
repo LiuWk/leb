@@ -1,3 +1,5 @@
 /target/
 design_patterns.iml
 .idea/
+/.gradle/
+logs

@@ -34,6 +34,9 @@ dependencies {
     compile 'org.hibernate.validator:hibernate-validator:6.0.17.Final'
     testCompile 'org.springframework:spring-test:5.1.9.RELEASE'
     testCompile 'org.assertj:assertj-core:3.13.2'
+    // https://mvnrepository.com/artifact/org.db4j/kilim
+    compile group: 'org.db4j', name: 'kilim', version: '2.0.2'
+
 }
 
 group = 'design_patterns'

@@ -19,6 +19,8 @@ public class parallelStreamDataFormate {
          */
         dateFormat1();
 
+        System.out.println();
+
     }
 
     private static void dateFormat1() {

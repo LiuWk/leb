@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author lwk
@@ -21,6 +22,10 @@ public class GroupTest {
                 new Article("6", "22", ArticleType.GUIDE, 10)
         );
 
+        Map<String, List<Article>> li = list.stream().collect(Collectors.groupingBy(article -> {
+            return String.valueOf(article.getLikes());
+        }));
+        System.out.println(JSON.toJSONString(li));
         /**
          * 根据文章作者分组
          */
@@ -55,6 +60,10 @@ public class GroupTest {
          */
         ConcurrentMap<String, List<Article>> concurMap = list.parallelStream().collect(Collectors.groupingByConcurrent(Article::getAuthor));
         System.out.println(JSON.toJSONString(concurMap));
+
+        System.out.println(list.stream().flatMap(article -> list.stream().map(Article::getAuthor)).count());
+
+        list.stream().flatMap(article -> list.stream()).forEach(System.out::println);
     }
 }
 
