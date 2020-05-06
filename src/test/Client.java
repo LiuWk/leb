@@ -2,6 +2,8 @@ package test;
 
 import util.JsonUtils;
 
+import java.util.concurrent.BlockingDeque;
+
 /**
  * leb测试用源代码
  * 
@@ -24,7 +26,6 @@ public class Client {
         test.doubleNum(10);
         System.out.println();
 
-        String aaaaaaaaaaaaaaaaaaaaaaaaa;
     }
 }
 class Test{

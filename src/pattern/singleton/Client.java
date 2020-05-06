@@ -28,5 +28,6 @@ public class Client {
                 System.out.println(Goalkeeper.getInstance("aa").hashCode());
             }
         }).start();
+
     }
 }
