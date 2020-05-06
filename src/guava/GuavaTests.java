@@ -11,5 +11,7 @@ public class GuavaTests {
         HashBiMap<Object, Object> map = HashBiMap.create();
         map.put("name","qweads");
         System.out.println();
+        //TODO guava api
+
     }
 }
