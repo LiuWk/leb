@@ -12,6 +12,7 @@ public class GuavaTests {
         map.put("name","qweads");
         System.out.println();
         //TODO guava api
-
+        System.out.println("123".getBytes().length);
+        System.out.println(Long.valueOf(1).byteValue());
     }
 }
