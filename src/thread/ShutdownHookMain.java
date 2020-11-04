@@ -11,7 +11,8 @@ public class ShutdownHookMain {
         ExecutorService service = ThreadUtil.newFixedThreadPool(1, "test");
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.out.println("执行钩子线程...");
-            service.shutdown();
+//            service.shutdown();
+            service.shutdownNow();
         }));
         for (int i = 0; i < 5; i++) {
             service.execute(() -> {
