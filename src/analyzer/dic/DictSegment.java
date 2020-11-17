@@ -58,7 +58,7 @@ public class DictSegment implements Comparable<DictSegment> {
     private int nodeState = 0;
     //词的来源，与词典名称一一对应， 比如： 脏词词典， 机构词词典等
     // private int[]  corpusTypes=new int[3];
-    private List<Integer> corpusTypes = Lists.newArrayList();
+    private final List<Integer> corpusTypes = Lists.newArrayList();
 
     public List<Integer> getCorpusTypes() {
         return corpusTypes;
@@ -127,7 +127,7 @@ public class DictSegment implements Comparable<DictSegment> {
         //设置hit的当前处理位置
         searchHit.setEnd(begin);
 
-        Character keyChar = new Character(charArray[begin]);
+        Character keyChar = charArray[begin];
         DictSegment ds = null;
 
         //引用实例变量为本地变量，避免查询时遇到更新的同步问题
@@ -145,7 +145,7 @@ public class DictSegment implements Comparable<DictSegment> {
 
         } else if (segmentMap != null) {
             //在map中查找
-            ds = (DictSegment) segmentMap.get(keyChar);
+            ds = segmentMap.get(keyChar);
         }
 
         //STEP2 找到DictSegment，判断词的匹配状态，是否继续递归，还是返回结果
@@ -233,7 +233,7 @@ public class DictSegment implements Comparable<DictSegment> {
 
     private synchronized void fillSegment(char[] charArray, int begin, int length, int enabled, int corpusType) {
         //获取字典表中的汉字对象
-        Character beginChar = new Character(charArray[begin]);
+        Character beginChar = charArray[begin];
         Character keyChar = CHAR_MAP.get(beginChar);
         //字典中没有该字，则将其添加入字典
         if (keyChar == null) {
@@ -314,7 +314,7 @@ public class DictSegment implements Comparable<DictSegment> {
             //获取Map容器，如果Map未创建,则创建Map
             Map<Character, DictSegment> segmentMap = getChildrenMap();
             //搜索Map
-            ds = (DictSegment) segmentMap.get(keyChar);
+            ds = segmentMap.get(keyChar);
             if (ds == null && create == 1) {
                 //构造新的segment
                 ds = new DictSegment(keyChar);

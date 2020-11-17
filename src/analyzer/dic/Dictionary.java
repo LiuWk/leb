@@ -45,6 +45,7 @@ public class Dictionary {
     private void init() {
         Iterable<Word> words = wordsLoader.load();
         for (Word word : words) {
+            // 添加字典
             this.addWord(word);
         }
     }

@@ -51,19 +51,25 @@
 		    <artifactId>spring-test</artifactId>
 		    <version>4.3.20.RELEASE</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
-			<version>1.8.9</version>
+			<version>1.9.6</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
 		<dependency>
 		    <groupId>org.aspectj</groupId>
 		    <artifactId>aspectjweaver</artifactId>
-		    <version>1.8.9</version>
+		    <version>1.9.6</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjtools -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjtools</artifactId>
+			<version>1.9.6</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 		<dependency>
 		    <groupId>log4j</groupId>
@@ -255,21 +261,21 @@
 			<artifactId>hbase-client</artifactId>
 			<version>1.2.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.solr</groupId>
-			<artifactId>solr-core</artifactId>
-			<version>8.6.3</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.restlet.jee</groupId>
-					<artifactId>org.restlet.ext.servlet</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.restlet.jee</groupId>
-					<artifactId>org.restlet</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.apache.solr</groupId>-->
+<!--			<artifactId>solr-core</artifactId>-->
+<!--			<version>8.6.3</version>-->
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.restlet.jee</groupId>-->
+<!--					<artifactId>org.restlet.ext.servlet</artifactId>-->
+<!--				</exclusion>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.restlet.jee</groupId>-->
+<!--					<artifactId>org.restlet</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+<!--		</dependency>-->
 
 	</dependencies>
 	<build>

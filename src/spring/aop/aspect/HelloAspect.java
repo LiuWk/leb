@@ -14,8 +14,7 @@ public class HelloAspect {
         System.out.println("hello aspect !");
     }
     public static void main(String[] args) {
-        HelloAspect ha = new HelloAspect();
-        ha.sayHello();
+        HelloAspect helloAspect = new HelloAspect();
+        helloAspect.sayHello();
     }
-    
 }
