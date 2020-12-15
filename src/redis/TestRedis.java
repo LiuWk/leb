@@ -51,6 +51,8 @@ public class TestRedis {
 
         Set<String> set = jedisCluster.sdiff(key1, key2);
         System.out.println(JSONObject.toJSONString(set));
+
+
     }
 
 }

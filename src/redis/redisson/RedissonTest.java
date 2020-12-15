@@ -1,4 +1,4 @@
-package redis;
+package redis.redisson;
 
 import org.redisson.Redisson;
 import org.redisson.RedissonMultiLock;

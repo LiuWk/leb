@@ -73,7 +73,7 @@ class WangMin implements Delayed {
     public int compareTo(Delayed o) {
         WangMin w = (WangMin) o;
         //比较 1是放入队尾  -1是放入队头
-        return this.getDelay(unit) > w.getDelay(unit) ? 1 : (this.getDelay(unit) < w.getDelay(unit) ? -1 : 0);
+        return Long.compare(this.getDelay(unit), w.getDelay(unit));
     }
 
     @Override

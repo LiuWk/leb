@@ -1,4 +1,4 @@
-package test;
+package spring.aop;
 
 /**
  * @author lwk

@@ -23,7 +23,6 @@ class MyThread extends Thread {
 
     @Override
     public void run() {
-        Sync sync = new Sync();
         Sync.test(i);
     }
 

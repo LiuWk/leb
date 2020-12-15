@@ -14,7 +14,7 @@ import org.apache.zookeeper.data.Stat;
 @Slf4j
 public class ZooleeperListenserTest {
     private static final CuratorFramework client = CuratorFrameworkFactory.builder()
-            .connectString("10.240.169.116:2181")
+            .connectString("10.240.169.118:2181")
             .sessionTimeoutMs(10000)
             .retryPolicy(new ExponentialBackoffRetry(1000, 3))
             .build();

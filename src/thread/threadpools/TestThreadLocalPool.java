@@ -1,14 +1,9 @@
 package thread.threadpools;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingDeque;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.RejectedExecutionException;
-import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.ThreadPoolExecutor;
+import com.alibaba.fastjson.JSONObject;
+
+import java.util.concurrent.*;
 import java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy;
-import java.util.concurrent.TimeUnit;
 
 /**
  * leb测试用源代码
@@ -47,7 +42,13 @@ public class TestThreadLocalPool {
         for (int i = 1; i <= 10; i++) {
             try {
                 String task = "task@ " + i;
+                // execute可以抛出异常
                 threadPool.execute(new ThreadPoolTask(task));
+
+                // submit异常信息必须从返回值中get
+//                Future<?> future = threadPool.submit(new ThreadPoolTask(task));
+//                System.out.println(future.get());
+
                 System.out.println("创建任务并提交到线程池中：" + task);
 
             } catch (Exception e) {
@@ -74,7 +75,7 @@ class MyPolicy implements RejectedExecutionHandler {
     @Override
     public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
         System.out.println("自定义处理..");
-        System.out.println("当前被拒绝的线程：" + r.toString());
+        System.out.println("当前被拒绝的线程：" + JSONObject.toJSONString(r));
         //一般处理方式是记录任务id，缓存起来在之后重新执行任务
     }
 

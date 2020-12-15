@@ -8,7 +8,7 @@ import java.util.concurrent.Semaphore;
  * 项目名称 : design_patterns
  * 创建日期 : 2017年7月10日
  * 类  描  述 : Semaphore可以控制某个资源可被同时访问的个数，通过 acquire() 获取一个许可，
- *              如果没有就等待，而 release() 释放一个许可。
+ *              如果没有就等待，而 release() 释放一个许可。Semaphore 也是基于 AQS,Semaphore 是共享锁
  * 修改历史 : 
  *     1. [2017年7月10日]创建文件 by lwk
  */
@@ -16,7 +16,7 @@ public class TestSemaphare {
 
     public static void main(String[] args) {
         final Semaphore s = new Semaphore(3);
-
+        System.out.println(Thread.currentThread().getName()+","+Thread.currentThread().isDaemon());
         for (int i = 0; i < 10; i++) {
             final int NO = i;
             new Thread(new Runnable() {

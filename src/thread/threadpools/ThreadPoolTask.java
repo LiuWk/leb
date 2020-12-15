@@ -1,5 +1,8 @@
 package thread.threadpools;
 
+import lombok.SneakyThrows;
+import org.apache.commons.lang3.RandomUtils;
+
 import java.io.Serializable;
 
 public class ThreadPoolTask implements Runnable, Serializable {
@@ -19,12 +22,16 @@ public class ThreadPoolTask implements Runnable, Serializable {
         this.data = data;
     }
 
+    @SneakyThrows
     @Override
     public void run() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+        if (RandomUtils.nextInt(0, 5) == 0) {
+            throw new Exception("异常测试");
         }
         System.out.println("执行任务-->" + data);
         data = null;
