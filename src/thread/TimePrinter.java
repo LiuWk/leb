@@ -1,5 +1,6 @@
 package thread;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class TimePrinter extends Thread {
@@ -30,4 +31,6 @@ public class TimePrinter extends Thread {
 		tp2.start();
 
 	}
+
+
 }

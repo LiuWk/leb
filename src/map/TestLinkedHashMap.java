@@ -1,5 +1,8 @@
 package map;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -41,7 +44,7 @@ public class TestLinkedHashMap {
             System.out.println(entry.getKey() + "," + entry.getValue());
         }
 
-        ArrayList list = new ArrayList<>();
+        System.out.println(StringUtils.isNumeric("12 "));
 
     }
 

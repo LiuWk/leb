@@ -1,17 +1,16 @@
-package test;
-
-import org.joda.time.LocalDateTime;
-import org.junit.Test;
+package thread;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(locations = {"classpath:application-bean.xml"})
-public class CatTest {
+/**
+ * 守护线程：如果主线程不结束运行，守护线程会一直执行。
+ * 主线程结束之后
+ * 如果服务只剩下守护线程，jvm会进行退出，停止守护线程执行。
+ * junit 操作是执行代码结束之后进行资源的释放，所以不支持多线程进行Junit测试。
+ */
+public class DaemonTest {
     private ExecutorService executorService = Executors.newFixedThreadPool(5);
 
 //    @Test
