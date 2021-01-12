@@ -24,6 +24,18 @@ public class TestRedis {
 
     /**
      * //TODO 添加方法功能描述
+     * maxActive：最大连接数
+     * maxIdle：最多空闲数
+     * whenExhaustedAction：连接数上限的拒绝策略。
+     *  WHEN_EXHAUSTED_FAIL --> 抛异常；
+     *  WHEN_EXHAUSTED_BLOCK --> 排队，队满抛异常；
+     *  WHEN_EXHAUSTED_GROW --> 继续分配，maxActive参数无效；
+     * maxWaitMillis：
+     * 表示当borrow一个jedis实例时，从连接池获取连接最大的等待时间，连接池满的情况下，会一直阻塞，
+     * 如果超过等待时间，则直接抛出JedisConnectionException，配置类为JedisPoolConfig，单位ms，缺省-1；
+     * <p>
+     * connectionTimeout：
+     * 连接超时时间，底层的Socket超时时间，在底层创建连接的时候才会使用，缺省2000。
      *
      * @param args 2017年8月16日 by lwk
      */
@@ -53,6 +65,7 @@ public class TestRedis {
         System.out.println(JSONObject.toJSONString(set));
 
 
+        String result = jedisCluster.setex("q1", 5, "lock");
     }
 
 }

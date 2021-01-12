@@ -8,11 +8,11 @@ public class ShutdownHookMain {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("start...");
 
-        ExecutorService service = ThreadUtil.newFixedThreadPool(1, "test");
+        ExecutorService service = ThreadUtil.newFixedThreadPool(2, "test");
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.out.println("执行钩子线程...");
 //            service.shutdown();
-            service.shutdownNow();
+//            service.shutdownNow();
         }));
         for (int i = 0; i < 5; i++) {
             service.execute(() -> {

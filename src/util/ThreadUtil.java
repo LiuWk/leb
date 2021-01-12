@@ -23,18 +23,12 @@ public class ThreadUtil extends ThreadPoolExecutor {
     /**
      * 调用父类的构造方法，并初始化HashMap和线程池名称
      *
-     * @param corePoolSize
-     *            线程池核心线程数
-     * @param maximumPoolSize
-     *            线程池最大线程数
-     * @param keepAliveTime
-     *            线程的最大空闲时间
-     * @param unit
-     *            空闲时间的单位
-     * @param workQueue
-     *            保存被提交任务的队列
-     * @param poolName
-     *            线程池名称
+     * @param corePoolSize    线程池核心线程数
+     * @param maximumPoolSize 线程池最大线程数
+     * @param keepAliveTime   线程的最大空闲时间
+     * @param unit            空闲时间的单位
+     * @param workQueue       保存被提交任务的队列
+     * @param poolName        线程池名称
      */
     public ThreadUtil(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue,
                       String poolName) {
@@ -82,7 +76,8 @@ public class ThreadUtil extends ThreadPoolExecutor {
         Date startDate = startTimes.remove(String.valueOf(r.hashCode()));
         Date finishDate = new Date();
         long diff = finishDate.getTime() - startDate.getTime();
-        // 统计任务耗时、初始线程数、核心线程数、正在执行的任务数量、已完成任务数量、任务总数、队列里缓存的任务数量、池中存在的最大线程数、最大允许的线程数、线程空闲时间、线程池是否关闭、线程池是否终止
+        // 统计任务耗时、初始线程数、核心线程数、正在执行的任务数量、已完成任务数量、任务总数、队列里缓存的任务数量、
+        // 池中存在的最大线程数、最大允许的线程数、线程空闲时间、线程池是否关闭、线程池是否终止
         LOGGER.info(String.format(this.poolName
                         + "-pool-monitor: Duration: %d ms, PoolSize: %d, CorePoolSize: %d, Active: %d, Completed: %d, Task: %d, Queue: %d, LargestPoolSize: %d, MaximumPoolSize: %d,  KeepAliveTime: %d, isShutdown: %s, isTerminated: %s",
                 diff, this.getPoolSize(), this.getCorePoolSize(), this.getActiveCount(), this.getCompletedTaskCount(), this.getTaskCount(),
@@ -93,17 +88,16 @@ public class ThreadUtil extends ThreadPoolExecutor {
     /**
      * 创建固定线程池，代码源于Executors.newFixedThreadPool方法，这里增加了poolName
      *
-     * @param nThreads
-     *            线程数量
-     * @param poolName
-     *            线程池名称
+     * @param nThreads 线程数量
+     * @param poolName 线程池名称
      * @return ExecutorService对象
      */
     public static ExecutorService newFixedThreadPool(int nThreads, String poolName) {
         if (EXECUTOR_SERVICE_MAP.containsKey(poolName)) {
             return EXECUTOR_SERVICE_MAP.get(poolName);
         } else {
-            ExecutorService executorService = new ThreadUtil(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>() {}, poolName);
+            ExecutorService executorService = new ThreadUtil(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>() {
+            }, poolName);
             EXECUTOR_SERVICE_MAP.put(poolName, executorService);
             return executorService;
         }
@@ -112,8 +106,7 @@ public class ThreadUtil extends ThreadPoolExecutor {
     /**
      * 创建缓存型线程池，代码源于Executors.newCachedThreadPool方法，这里增加了poolName
      *
-     * @param poolName
-     *            线程池名称
+     * @param poolName 线程池名称
      * @return ExecutorService对象
      */
     public static ExecutorService newCachedThreadPool(String poolName) {
@@ -132,8 +125,7 @@ public class ThreadUtil extends ThreadPoolExecutor {
         /**
          * 初始化线程工厂
          *
-         * @param poolName
-         *            线程池名称
+         * @param poolName 线程池名称
          */
         EventThreadFactory(String poolName) {
             SecurityManager s = System.getSecurityManager();

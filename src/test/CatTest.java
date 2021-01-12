@@ -3,11 +3,14 @@ package test;
 import org.joda.time.LocalDateTime;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(locations = {"classpath:application-bean.xml"})
@@ -46,6 +49,17 @@ public class CatTest {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        test();
+        int time = LocalDateTime.now().getHourOfDay();
+        boolean am = time <= 12;
+        boolean noon = time > 12 && time <= 17 ;
+        boolean pm = time > 17;
+        System.out.println(am);
+        System.out.println(noon);
+        System.out.println(pm);
+
+        String str = "，,,..aaaBB11啊啊cc22";
+        Pattern pattern = Pattern.compile("^([\\p{P}A-Za-z0-9\\u4e00-\\u9fa5])*$");
+        Matcher match = pattern.matcher(str);
+        System.out.println(match.matches());
     }
 }
